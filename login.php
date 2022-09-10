@@ -21,27 +21,31 @@ include("connect.php");
   <div class="container">
     <div class="d-flex justify-content-center">
       <div class="col-center">
-        <h2>Login Page</h2>
+        <div class="text-center"><br/>
+          <h2>Login Page</h2>
+        </div>
         <form method="post" action="checklogin.php" class="form-horizontal">
           <div class="form-group">
-            <label for="txt_name" class="col-1 col-form-label">UserName</label>
+            <br />
             <div class="form-center">
-              <div class="col-sm-8">
-                <input class="form-control" type="text" id="txt_login" name="txt_login" required="true">
+              <div class="col-center">
+                <input class="form-control" type="text" id="txt_login" name="txt_login" placeholder="UserName" required="true">
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="txt_gpa" class="col-1 col-form-label">Password</label>
-            <div class="col-sm-8">
-              <input class="form-control" type="password" id="txt_password" name="txt_password" required="true">
+            <br />
+            <div class="col-center">
+              <input class="form-control" type="password" id="txt_password" name="txt_password" placeholder="Password" required="true">
             </div>
           </div>
-          <div class="form-group">
-            <label for="bt" class="col-1 col-form-label"></label>
-            <div>
-              <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
-              <button class="btn btn-primary" id="bt">Login</button>
+          <div class="text-center">
+            <div class="form-group">
+              <label for="bt" class="col-1 col-form-label"></label>
+              <div>
+                <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
+                <button class="btn btn-primary" id="bt">Login</button>
+              </div>
             </div>
           </div>
         </form>

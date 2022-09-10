@@ -51,14 +51,17 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6"><br />
+
         <h2>Student List</h2>
+
         <form class="form-inline d-flex" action="index.php" method="post">
-          
+          <div class="col-5">
             <input type="text" class="form-control" name="q_name" placeholder="name">
-          
+          </div>
           <button type="submit" class="btn btn-primary">Search</button>
         </form>
+        <br />
         <table class="table">
           <tr>
             <th>ID</th>
@@ -82,7 +85,7 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
                 </td>
                 <td>
                   <a href="edit.php?id=<?php echo $row['Id']; ?>">
-                  <i class="bi bi-pencil-fill"> edit</i>
+                    <i class="bi bi-pencil-fill"> edit</i>
                   </a>
                   | <a href="#" onclick="del('<?php echo $row['Id'] ?>')">
                     <i class="bi bi-archive-fill"> delete</i>
@@ -106,35 +109,35 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
           ?>
         </ul>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6"><br />
         <h2> Insert Student </h2>
         <form method="post" action="add.php" class="form-horizontal">
 
           <div class="form-group">
-            <label for="txt_name" class="col-1 col-form-label">Name</label>
+            <br />
             <div class="col-5">
-              <input class="form-control" type="text" id="txt_name" name="txt_name">
+              <input class="form-control" type="text" id="txt_name" name="txt_name" placeholder="name">
             </div>
           </div>
           <div class="form-group">
-            <label for="txt_gpa" class="col-1 col-form-label">GPA</label>
+            <br />
             <div class="col-5">
-              <input class="form-control" type="number" id="txt_gpa" name="txt_gpa">
+              <input class="form-control" type="number" id="txt_gpa" name="txt_gpa" placeholder="GPA">
             </div>
           </div>
           <div class="form-group">
             <label for="bt" class="col-1 col-form-label"></label>
             <div class="col-5">
-              <button class="btn btn-primary" id="bt">Submit</button>
+              <button class="btn btn-success" id="bt">Submit</button>
             </div>
-          </div>
-          <a href="logout.php" class="link-danger"> ออกจากระบบ </a>
+          </div><br />
+          <a href="logout.php" class="btn btn-danger"> ออกจากระบบ </a>
         </form>
       </div>
     </div>
   </div>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 </body>
 
