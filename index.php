@@ -107,7 +107,7 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
         </ul>
       </div>
       <div class="col-md-6">
-        <h2>Insert Student </h2>
+        <h2> Insert Student </h2>
         <form method="post" action="add.php" class="form-horizontal">
 
           <div class="form-group">
