@@ -39,7 +39,7 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script>
     function del(id) {
-      if (confirm("ยืนยันการลบข้อมูล")) {
+      if (confirm("ยืนยันการลบข้อมูลในตาราง")) {
         window.location = "delete.php?id=" + id;
       } else {
         return false;
