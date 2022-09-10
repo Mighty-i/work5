@@ -19,8 +19,8 @@ include("connect.php");
 
 <body>
   <div class="container">
-    <div class="d-flex justify-content-center align-items-center vh-100">
-      <div class="form-group">
+    <div class="d-flex justify-content-center">
+      <div class="col-center">
         <h2>Login Page</h2>
         <form method="post" action="checklogin.php" class="form-horizontal">
           <div class="form-group">

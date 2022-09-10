@@ -22,6 +22,7 @@ else{
     <link href="bootstrap/css/s2-docs.css" type="text/css" rel="stylesheet">
   </head>
   <body>
+    
     <div class="container">
     <div class="col-md-6">
         <h2>Edit Information</h2>
