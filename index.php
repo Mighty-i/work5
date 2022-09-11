@@ -99,11 +99,20 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
         </table>
         <!-- bootstrap pagination -->
         <ul class="pagination">
-          <li class="disabled"><a href="#"><?php echo 'TotalRows:', $totalRow, '/TotalPages:', $totalPage; ?></a></li>
+          <li class="page-item disabled">
+            <a href="#" class="page-link">
+              <?php echo 'TotalRows:', $totalRow, '/TotalPages:', $totalPage; ?>
+            </a>
+          </li>
           <?php
           for ($i = 1; $i <= $totalPage; $i++) {
           ?>
-            <li <?php echo ($i == $page) ? ' class="active"' : '' ?>><a href="index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+            <li 
+              <?php echo ($i == $page) ? ' class="active"' : '' ?>>
+              <a href="index.php?page=<?php echo $i; ?>" class="page-link">
+                <?php echo $i; ?>
+              </a>
+            </li>
           <?php
           }
           ?>
@@ -131,7 +140,7 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
               <button class="btn btn-success" id="bt">Submit</button>
             </div>
           </div><br />
-          <a href="logout.php" class="btn btn-danger"> ออกจากระบบ </a>
+          <a href="logout.php" class="btn btn-danger"> Logout </a>
         </form>
       </div>
     </div>
