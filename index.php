@@ -143,7 +143,7 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
               <button class="btn btn-success" id="bt">Submit</button>
             </div>
           </div><br />
-          <a href="logout.php" class="btn btn-danger"> Logout </a>
+          <a href="logout.php" class="btn btn-danger" type="submit"> Logout </a>
         </form>
       </div>
     </div>
