@@ -5,4 +5,5 @@ if($_SESSION['loginstatus'] !=1)
     header("location:login.php");
     exit();
 }
+session_destroy();
 ?>
