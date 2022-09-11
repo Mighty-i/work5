@@ -98,24 +98,27 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
 
         </table>
         <!-- bootstrap pagination -->
-        <ul class="pagination">
-          <li class="page-item disabled">
-            <a href="#" class="page-link">
-              <?php echo 'TotalRows:', $totalRow, '/TotalPages:', $totalPage; ?>
-            </a>
-          </li>
-          <?php
-          for ($i = 1; $i <= $totalPage; $i++) {
-          ?>
-            <li 
-              <?php echo ($i == $page) ? ' class="active"' : '' ?>>
-              <a href="index.php?page=<?php echo $i; ?>" class="page-link">
-                <?php echo $i; ?>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a href="#" class="page-link">
+                <?php echo 'TotalRows:', $totalRow, '/TotalPages:', $totalPage; ?>
               </a>
             </li>
-          <?php
-          }
-          ?>
+            <?php
+            for ($i = 1; $i <= $totalPage; $i++) {
+            ?>
+              <li <?php echo ($i == $page) ? ' class="page-item active"' : '' ?>>
+                <a class="page-link" href="index.php?page=<?php echo $i; ?>">
+                  <?php echo $i; ?>
+                </a>
+              </li>
+            <?php
+            }
+            ?>
+          </ul>
+        </nav>
+        <ul class="pagination">
         </ul>
       </div>
       <div class="col-md-6"><br />
