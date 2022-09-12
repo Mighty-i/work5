@@ -1,6 +1,6 @@
 <?php
 include("connect.php") ;
-session_start() ;
+
 if(!empty($_POST['txt_login']) && !empty($_POST['txt_password']))
 {
   $password = sha1($_POST['txt_password']) ;
@@ -12,7 +12,7 @@ if(!empty($_POST['txt_login']) && !empty($_POST['txt_password']))
   if($login == $rs->fetch_array()['login'])
 
   {
-
+    session_start() ;
     $_SESSION['logStatus'] = 1;
     header("location:index.php") ;
   }
