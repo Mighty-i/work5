@@ -1,3 +1,3 @@
 <?php
-$conn = new mysqli('localhost','root','','php_students');
+$conn = new mysqli('localhost','phattharadanai','64011211064','php_students');
 ?>

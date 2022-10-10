@@ -12,7 +12,7 @@ if (!empty($_POST['q_name'])) {
 //get total rows
 $rs = $conn->query("select count(Id) as num from student $sql_search ");
 $totalRow =  $rs->fetch_array()['num'];
-$rowPerPage = 10;
+$rowPerPage = 5;
 
 if ($totalRow == 0)
   $totalPage = 1;
@@ -30,6 +30,7 @@ $rs = $conn->query("select * from student $sql_search limit $startRow,$rowPerPag
 <head>
   <meta charset="utf-8">
   <title></title>
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
   <!--link href="bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
   <link href="bootstrap/css/font-awesome.css" type="text/css" rel="stylesheet" />
   <link href="bootstrap/css/s2-docs.css" type="text/css" rel="stylesheet"-->

@@ -7,6 +7,7 @@ include("connect.php");
 <head>
   <meta charset="utf-8">
   <title></title>
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
   <!--link href="bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
     <link href="bootstrap/css/font-awesome.css" type="text/css" rel="stylesheet">
     <link href="bootstrap/css/s2-docs.css" type="text/css" rel="stylesheet"-->
