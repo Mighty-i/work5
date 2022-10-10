@@ -12,7 +12,7 @@ if (!empty($_POST['q_name'])) {
 //get total rows
 $rs = $conn->query("select count(Id) as num from student $sql_search ");
 $totalRow =  $rs->fetch_array()['num'];
-$rowPerPage = 5;
+$rowPerPage = 5;//5แถว
 
 if ($totalRow == 0)
   $totalPage = 1;
